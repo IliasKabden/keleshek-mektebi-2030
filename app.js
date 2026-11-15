@@ -8,23 +8,23 @@
   const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
   const paths = {
-    smart:'<rect x="5" y="5" width="14" height="14" rx="3"/keleshek-mektebi-2030/><path d="M9 9h6v6H9zM9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3"/keleshek-mektebi-2030/>',
-    lab:'<path d="M9 3h6m-5 0v6l-6 10a1.4 1.4 0 0 0 1.2 2h13.6a1.4 1.4 0 0 0 1.2-2L14 9V3M7 15h10M9 18h.01m5-1h.01"/keleshek-mektebi-2030/>',
-    adal:'<path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/keleshek-mektebi-2030/><path d="m8 12 3 3 5-6"/keleshek-mektebi-2030/>',
-    ustaz:'<path d="M12 6C9 3 5 3 2 4v15c4-1 7-1 10 2 3-3 6-3 10-2V4c-3-1-7-1-10 2Zm0 0v15M6 8l3 1M6 12l3 1m6-4 3-1m-3 5 3-1"/keleshek-mektebi-2030/>',
-    eco:'<path d="M20 3C7 2 2 8 6 15c5 7 16 3 14-12ZM4 21 16 9M8 17v-5m5 0h5"/keleshek-mektebi-2030/>',
-    skills:'<circle cx="12" cy="12" r="9"/keleshek-mektebi-2030/><path d="m16 8-2 6-6 2 2-6 6-2Z"/keleshek-mektebi-2030/>',
-    birge:'<path d="M20.8 4.8a5.5 5.5 0 0 0-7.8 0L12 6l-1-1.2a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.4a5.5 5.5 0 0 0 0-7.8Z"/keleshek-mektebi-2030/>',
-    check:'<path d="m5 12 4 4L19 6"/keleshek-mektebi-2030/>',
-    info:'<circle cx="12" cy="12" r="9"/keleshek-mektebi-2030/><path d="M12 11v6m0-10v.1"/keleshek-mektebi-2030/>',
-    star:'<path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/keleshek-mektebi-2030/>',
-    download:'<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/keleshek-mektebi-2030/>',
-    menu:'<path d="M4 7h16M4 12h16M4 17h16"/keleshek-mektebi-2030/>',
-    close:'<path d="m5 5 14 14M5 19 19 5"/keleshek-mektebi-2030/>'
+    smart:'<rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 9h6v6H9zM9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3"/>',
+    lab:'<path d="M9 3h6m-5 0v6l-6 10a1.4 1.4 0 0 0 1.2 2h13.6a1.4 1.4 0 0 0 1.2-2L14 9V3M7 15h10M9 18h.01m5-1h.01"/>',
+    adal:'<path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/>',
+    ustaz:'<path d="M12 6C9 3 5 3 2 4v15c4-1 7-1 10 2 3-3 6-3 10-2V4c-3-1-7-1-10 2Zm0 0v15M6 8l3 1M6 12l3 1m6-4 3-1m-3 5 3-1"/>',
+    eco:'<path d="M20 3C7 2 2 8 6 15c5 7 16 3 14-12ZM4 21 16 9M8 17v-5m5 0h5"/>',
+    skills:'<circle cx="12" cy="12" r="9"/><path d="m16 8-2 6-6 2 2-6 6-2Z"/>',
+    birge:'<path d="M20.8 4.8a5.5 5.5 0 0 0-7.8 0L12 6l-1-1.2a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.4a5.5 5.5 0 0 0 0-7.8Z"/>',
+    check:'<path d="m5 12 4 4L19 6"/>',
+    info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.1"/>',
+    star:'<path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/>',
+    download:'<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/>',
+    menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',
+    close:'<path d="m5 5 14 14M5 19 19 5"/>'
   };
   function icon(name){return `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">${paths[name] || paths.star}</svg>`;}
   const url = id => `/keleshek-mektebi-2030/projects/${id}.html`;
-  const brand = `<a class="brand" href="/keleshek-mektebi-2030/" aria-label="Келешек мектебі — басты бет"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 0v40M0 20h40M6 6l28 28M6 34 34 6" stroke="currentColor" stroke-width="7"/keleshek-mektebi-2030/></svg><span class="brand-copy">Келешек мектебі<span style="color:var(--blue)">.</span><small>БОЛАШАҚҚА БАҒЫТ · 2030</small></span></a>`;
+  const brand = `<a class="brand" href="/keleshek-mektebi-2030/" aria-label="Келешек мектебі — басты бет"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 0v40M0 20h40M6 6l28 28M6 34 34 6" stroke="currentColor" stroke-width="7"/></svg><span class="brand-copy">Келешек мектебі<span style="color:var(--blue)">.</span><small>БОЛАШАҚҚА БАҒЫТ · 2030</small></span></a>`;
   document.getElementById('site-header').innerHTML = `<header class="site-header"><div class="wrap header-inner">${brand}<nav class="desktop-nav" id="main-nav" aria-label="Негізгі навигация"><a href="/keleshek-mektebi-2030/programme.html" ${page==='programme'?'class="active" aria-current="page"':''}>Бағдарлама</a><a href="/keleshek-mektebi-2030/projects/" ${page==='projects'||page==='detail'?'class="active" aria-current="'+(page==='detail'?'true':'page')+'"':''}>Жобалар</a><a href="/keleshek-mektebi-2030/roadmap.html" ${page==='roadmap'?'class="active" aria-current="page"':''}>Жол картасы</a></nav><a class="btn header-action" href="/keleshek-mektebi-2030/projects/">Жобаларды қарау ${arrow}</a><button class="menu-toggle" aria-label="Мәзірді ашу" aria-expanded="false" aria-controls="main-nav">${icon('menu')}</button></div></header>`;
   document.getElementById('site-footer').innerHTML = `<footer class="footer"><div class="wrap"><div class="footer-top">${brand}<p>Білім, технология және құндылық тоғысқан мектептің даму экожүйесі.</p><nav class="footer-links" aria-label="Төменгі навигация"><a href="/keleshek-mektebi-2030/programme.html">Бағдарлама</a><a href="/keleshek-mektebi-2030/projects/">Жобалар</a><a href="/keleshek-mektebi-2030/roadmap.html">Жол картасы</a></nav></div><div class="footer-bottom"><span>© 2026 Келешек мектебі — 2030</span><span>Ұсынылатын даму моделі · 2026–2030</span></div></div></footer>`;
   function card(p, index){const d=p.kk;return `<a class="project-card ${p.id==='smart'?'blue':p.id==='eco'?'soft':''}" href="${url(p.id)}"><div class="project-card-top"><span class="project-icon">${icon(p.icon)}</span><span class="project-num">/ ${p.number}</span></div><h3>${esc(p.name)}</h3><p class="project-title">${esc(d.title)}</p><p>${esc(d.short)}</p><div class="project-card-bottom">${p.priority?'<span class="pill priority">Басым жоба</span>':'<span class="pill">Даму бағыты</span>'}<span class="round-arrow" aria-hidden="true">↗</span></div></a>`;}
